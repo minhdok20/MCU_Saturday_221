@@ -1,0 +1,13 @@
+display.c:13:6:redl_greenp	8	static
+display.c:20:6:redl_yellowp	8	static
+display.c:27:6:redp_greenl	8	static
+display.c:34:6:redp_yellowl	8	static
+display.c:41:6:toggle_red	8	static
+display.c:48:6:toggle_yellow	8	static
+display.c:55:6:toggle_green	8	static
+display.c:63:6:display	24	static
+display.c:70:6:update	88	static
+display.c:79:6:updateClockBufferMode1	4	static
+display.c:117:6:updateClockBufferRed	4	static
+display.c:123:6:updateClockBufferYellow	4	static
+display.c:129:6:updateClockBufferGreen	4	static
