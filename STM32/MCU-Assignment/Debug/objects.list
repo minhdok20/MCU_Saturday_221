@@ -1,5 +1,6 @@
 "./Core/Src/button.o"
 "./Core/Src/display.o"
+"./Core/Src/fsm_pedestrian_light.o"
 "./Core/Src/fsm_traffic_light.o"
 "./Core/Src/global.o"
 "./Core/Src/main.o"

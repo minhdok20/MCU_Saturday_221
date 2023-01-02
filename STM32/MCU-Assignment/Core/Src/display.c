@@ -11,52 +11,63 @@ UART_HandleTypeDef huart2;
 
 // Display traffic light
 void redl_greenp() {
-	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET);
-	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, SET);
-	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, SET);
-	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, RESET);
-}
-
-void redl_yellowp() {
-	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET);
-	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, SET);
-	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, RESET);
-	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, RESET);
-}
-
-void redp_greenl() {
 	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, SET);
 	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET);
 	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, RESET);
 	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, SET);
 }
 
-void redp_yellowl() {
-	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET);
+void redl_yellowp() {
+	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, SET);
 	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET);
-	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, RESET);
+	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, SET);
 	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, SET);
+}
+
+void redp_greenl() {
+	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET);
+	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, SET);
+	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, SET);
+	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, RESET);
+}
+
+void redp_yellowl() {
+	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, SET);
+	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, SET);
+	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, SET);
+	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, RESET);
 }
 
 void toggle_red() {
 	HAL_GPIO_TogglePin(D2_GPIO_Port, D2_Pin);
-	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, SET);
+	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET);
 	HAL_GPIO_TogglePin(D4_GPIO_Port, D4_Pin);
-	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, SET);
+	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, RESET);
 }
 
+int toggle = 0;
 void toggle_yellow() {
-	HAL_GPIO_TogglePin(D2_GPIO_Port, D2_Pin);
-	HAL_GPIO_TogglePin(D3_GPIO_Port, D3_Pin);
-	HAL_GPIO_TogglePin(D4_GPIO_Port, D4_Pin);
-	HAL_GPIO_TogglePin(D5_GPIO_Port, D5_Pin);
+	if (toggle == 0) {
+		HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, SET);
+		HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, SET);
+		HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, SET);
+		HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, SET);
+		toggle = 1;
+	}
+	else {
+		HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET);
+		HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, RESET);
+		HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, RESET);
+		HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, RESET);
+		toggle = 0;
+	}
 }
 
 void toggle_green() {
 	HAL_GPIO_TogglePin(D3_GPIO_Port, D3_Pin);
-	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, SET);
+	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, RESET);
 	HAL_GPIO_TogglePin(D5_GPIO_Port, D5_Pin);
-	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, SET);
+	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, RESET);
 }
 
 

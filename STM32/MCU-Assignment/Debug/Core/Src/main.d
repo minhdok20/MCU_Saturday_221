@@ -27,7 +27,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/software_timer.h ../Core/Inc/button.h ../Core/Inc/main.h \
  ../Core/Inc/software_timer.h ../Core/Inc/display.h ../Core/Inc/global.h \
  ../Core/Inc/global.h ../Core/Inc/fsm_traffic_light.h \
- ../Core/Inc/button.h ../Core/Inc/display.h
+ ../Core/Inc/button.h ../Core/Inc/display.h \
+ ../Core/Inc/fsm_pedestrian_light.h
 
 ../Core/Inc/main.h:
 
@@ -100,3 +101,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/button.h:
 
 ../Core/Inc/display.h:
+
+../Core/Inc/fsm_pedestrian_light.h:

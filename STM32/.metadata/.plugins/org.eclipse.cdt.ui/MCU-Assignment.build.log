@@ -1,10 +1,10 @@
-16:42:32 **** Incremental Build of configuration Debug for project MCU-Assignment ****
+21:36:04 **** Incremental Build of configuration Debug for project MCU-Assignment ****
 make -j4 all 
 arm-none-eabi-size   MCU-Assignment.elf 
    text	   data	    bss	    dec	    hex	filename
-  19124	    216	   1960	  21300	   5334	MCU-Assignment.elf
+  21760	    216	   2000	  23976	   5da8	MCU-Assignment.elf
 Finished building: default.size.stdout
  
 
-16:42:32 Build Finished. 0 errors, 0 warnings. (took 490ms)
+21:36:04 Build Finished. 0 errors, 0 warnings. (took 559ms)
 

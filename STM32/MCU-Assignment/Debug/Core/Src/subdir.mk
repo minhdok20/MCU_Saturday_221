@@ -7,6 +7,7 @@
 C_SRCS += \
 ../Core/Src/button.c \
 ../Core/Src/display.c \
+../Core/Src/fsm_pedestrian_light.c \
 ../Core/Src/fsm_traffic_light.c \
 ../Core/Src/global.c \
 ../Core/Src/main.c \
@@ -20,6 +21,7 @@ C_SRCS += \
 OBJS += \
 ./Core/Src/button.o \
 ./Core/Src/display.o \
+./Core/Src/fsm_pedestrian_light.o \
 ./Core/Src/fsm_traffic_light.o \
 ./Core/Src/global.o \
 ./Core/Src/main.o \
@@ -33,6 +35,7 @@ OBJS += \
 C_DEPS += \
 ./Core/Src/button.d \
 ./Core/Src/display.d \
+./Core/Src/fsm_pedestrian_light.d \
 ./Core/Src/fsm_traffic_light.d \
 ./Core/Src/global.d \
 ./Core/Src/main.d \

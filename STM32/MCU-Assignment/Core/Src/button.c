@@ -9,7 +9,7 @@
 
 // Set thoi gian
 int longkeyPress = 2000;
-int change_statelongkey = 250;
+int change_statelongkey = 500;
 
 // Khoi tao cac bien de xu li chong rung, xu li tin hieu, xu li nut nhan o hai che do (nhan thuong va nhan giu)
 int KeyReg0[NUM_OF_BUTTONS] = {NORMAL_STATE};
@@ -54,9 +54,9 @@ void getKeyInput() {
 		else if (i == 2) {
 			KeyReg2[i] = HAL_GPIO_ReadPin(A3_GPIO_Port, A3_Pin); // SET
 		}
-//		else if (i == 3) {
-//			KeyReg2[i] = HAL_GPIO_ReadPin(A0_GPIO_Port, A0_Pin); // PEDESTRIAN BUTTON
-//		}
+		else if (i == 3) {
+			KeyReg2[i] = HAL_GPIO_ReadPin(A0_GPIO_Port, A0_Pin); // PEDESTRIAN BUTTON
+		}
 		// Xu li tin hieu
 		if ((KeyReg1[i] == KeyReg0[i]) && (KeyReg1[i] == KeyReg2[i])){
 			if (KeyReg3[i] != KeyReg2[i]){

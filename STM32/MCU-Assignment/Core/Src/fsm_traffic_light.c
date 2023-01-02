@@ -250,7 +250,7 @@ void fsm_traffic_light() {
 		break;
 
 	case SET_TIMER_RED:
-		// Neu timer_flag[3] == 1, toggle tat ca cac den RED va setTimer lai
+		// Neu timer_flag[2] == 1, toggle tat ca cac den RED va setTimer lai
 		if (timer_flag[2] == 1) {
 			setTimer(2, 500);
 			toggle_red();
@@ -281,7 +281,7 @@ void fsm_traffic_light() {
 		break;
 
 	case SET_TIMER_YELLOW:
-		// Neu timer_flag[3] == 1, toggle tat ca cac den YELLOW va setTimer lai
+		// Neu timer_flag[2] == 1, toggle tat ca cac den YELLOW va setTimer lai
 		if (timer_flag[2] == 1) {
 			setTimer(2, 500);
 			toggle_yellow();
@@ -315,7 +315,7 @@ void fsm_traffic_light() {
 
 	case SET_TIMER_GREEN:
 		// Neu timer_flag[2] == 1, toggle tat ca cac den GREEN va setTimer lai
-		if (timer_flag[3] == 1) {
+		if (timer_flag[2] == 1) {
 			setTimer(2, 500);
 			toggle_green();
 		}
