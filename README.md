@@ -16,6 +16,6 @@
 
 ## Giới thiệu cấu trúc Repo Github
 <ul>
-<li>*Branch main:* Chứa main code BTL của nhóm. </li>
-<li>*Các branch có tên các MSSV:* Chứa các commit code cũ của các thành viên trong nhóm.</li>
+<li>Branch main: Chứa main code BTL của nhóm. </li>
+<li>Các branch có tên các MSSV: Chứa các commit code cũ của các thành viên trong nhóm.</li>
 </ul>
