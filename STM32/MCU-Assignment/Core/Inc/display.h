@@ -24,6 +24,7 @@ void toggle_green();
 
 extern int index_led;
 extern int counterL, counterP;
+extern int indexL, indexP;
 
 void display(int counter, UART_HandleTypeDef huart2);
 void update();

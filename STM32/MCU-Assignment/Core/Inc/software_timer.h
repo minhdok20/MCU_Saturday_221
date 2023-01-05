@@ -8,7 +8,7 @@
 #ifndef INC_SOFTWARE_TIMER_H_
 #define INC_SOFTWARE_TIMER_H_
 
-#define NUM_OF_TIMERS 	8  				// Number of Timers to use
+#define NUM_OF_TIMERS 	9  				// Number of Timers to use
 // Timer 0: Set thoi gian chuyen doi cac trang thai cua MODE 1
 // Timer 1: Gui qua UART (Mode1)
 // Timer 2: Blinking LED MODE3

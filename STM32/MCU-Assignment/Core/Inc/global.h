@@ -40,8 +40,10 @@
 extern int RED;
 extern int YELLOW;
 extern int GREEN;
+extern int sec_RED;
 
 extern int status;
+
 
 // Display UART
 extern char str[50];

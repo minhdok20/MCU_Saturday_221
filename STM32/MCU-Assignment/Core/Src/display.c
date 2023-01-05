@@ -86,25 +86,31 @@ void update() {
 }
 
 
-int counterL = 1, counterP = 1;
+int counterL, counterP;
 void updateClockBufferMode1() {
 	// Cap nhat gia tri thoi gian vao trong clockBuffer
 	// Doi voi Landscape
 	/* Den RED-Landscape sang (dem nguoc tu RED-1 -> 0) */
 	if (counterL <= RED) {
 		indexL = RED - counterL;
+		sec_RED = indexL;
 	}
 	/* Den GREEN-Landscape sang (dem nguoc tu GREEN-1 -> 0) */
 	else if (counterL <= (RED + GREEN)) {
 		indexL = RED + GREEN - counterL;
 	}
 	/* Den YELLOW-Landscape sang (dem nguoc tu YELLOW-1 -> 0) */
-	else {
+	else if (counterL <= (RED + GREEN + YELLOW)){
 		indexL = RED + GREEN + YELLOW - counterL;
 	}
 	counterL++;
 	/* Neu thoi gian YELLOW-Landscape ket thuc, quay tro lai setup thoi gian cho RED-Landscape sang lai */
-	if (counterL > RED + YELLOW + GREEN) counterL = 1;
+	if (counterL > RED + YELLOW + GREEN) {
+		counterL = 1;
+		indexL = RED - counterL;
+		sec_RED = indexL;
+	}
+
 
 
 	// Doi voi 2 LED 7-SEG Portrait
@@ -117,7 +123,7 @@ void updateClockBufferMode1() {
 		indexP = YELLOW + GREEN - counterP;
 	}
 	/* Den RED-Portrait sang (dem nguoc tu RED-1 -> 0) */
-	else {
+	else if (counterP <= (RED + GREEN + YELLOW)) {
 		indexP = RED + GREEN + YELLOW - counterP;
 	}
 	counterP++;

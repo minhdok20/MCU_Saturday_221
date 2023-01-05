@@ -73,9 +73,9 @@ void fsm_traffic_light() {
 		}
 		// Neu timer_flag[1] == 1, update gia tri thoi gian dem nguoc va setTimer lai
 		if (timer_flag[1] == 1) {
+			setTimer(1, 1000);
 			updateClockBufferMode1();
 			update();
-			setTimer(1, 1000);
 		}
 		// Neu nhan nut MODE, he thong chuyen sang mode 2
 		if (isButtonPressed(0) == 1) {
@@ -93,9 +93,9 @@ void fsm_traffic_light() {
 		}
 		// Neu timer_flag[1] == 1, update gia tri thoi gian dem nguoc va setTimer lai
 		if (timer_flag[1] == 1) {
+			setTimer(1, 1000);
 			updateClockBufferMode1();
 			update();
-			setTimer(1, 1000);
 		}
 		// Neu nhan nut MODE, he thong chuyen sang mode 2
 		if (isButtonPressed(0) == 1) {
@@ -113,9 +113,9 @@ void fsm_traffic_light() {
 		}
 		// Neu timer_flag[1] == 1, update gia tri thoi gian dem nguoc va setTimer lai
 		if (timer_flag[1] == 1) {
+			setTimer(1, 1000);
 			updateClockBufferMode1();
 			update();
-			setTimer(1, 1000);
 		}
 		// Neu nhan nut MODE, he thong chuyen sang mode 2
 		if (isButtonPressed(0) == 1) {
@@ -133,9 +133,9 @@ void fsm_traffic_light() {
 		}
 		// Neu timer_flag[1] == 1, update gia tri thoi gian dem nguoc va setTimer lai
 		if (timer_flag[1] == 1) {
+			setTimer(1, 1000);
 			updateClockBufferMode1();
 			update();
-			setTimer(1, 1000);
 		}
 		// Neu nhan nut MODE, he thong chuyen sang mode 2
 		if (isButtonPressed(0) == 1) {

@@ -74,9 +74,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef* huart) {
 	}
 }
 
-void setPWM(int index){
-	__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, index);
-}
+
 /* USER CODE END 0 */
 
 /**
@@ -126,7 +124,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  fsm_traffic_light();
-	  fsm_pedestrian_light();
+	  fsm_pedestrian_light(htim3);
   }
   /* USER CODE END 3 */
 }
@@ -235,7 +233,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 63;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 999;
+  htim3.Init.Period = 99;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -366,10 +364,8 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef * htim) {
-	if (htim->Instance == TIM2) {
-		timerRun();
-		getKeyInput();
-	}
+	timerRun();
+	getKeyInput();
 }
 /* USER CODE END 4 */
 

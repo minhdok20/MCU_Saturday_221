@@ -10,9 +10,11 @@
 
 int status = INIT;
 
-int RED = 5;
-int YELLOW = 2;
-int GREEN = 3;
+int RED = 11;
+int YELLOW = 3;
+int GREEN = 8;
+
+int sec_RED = 0;
 
 char str[50];
 uint8_t temp = 0;

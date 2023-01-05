@@ -8,6 +8,6 @@ display.c:66:6:toggle_green	8	static
 display.c:74:6:display	24	static
 display.c:81:6:update	88	static
 display.c:90:6:updateClockBufferMode1	4	static
-display.c:128:6:updateClockBufferRed	4	static
-display.c:134:6:updateClockBufferYellow	4	static
-display.c:140:6:updateClockBufferGreen	4	static
+display.c:134:6:updateClockBufferRed	4	static
+display.c:140:6:updateClockBufferYellow	4	static
+display.c:146:6:updateClockBufferGreen	4	static
