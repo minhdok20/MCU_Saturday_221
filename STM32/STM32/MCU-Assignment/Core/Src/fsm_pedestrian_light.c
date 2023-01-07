@@ -17,6 +17,8 @@ void fsm_pedestrian_light(TIM_HandleTypeDef htim3){
 		break;
 	case PEDES_OFF:
 		__HAL_TIM_SetCompare (&htim3, TIM_CHANNEL_1, 0);
+		HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin, 0);
+		HAL_GPIO_WritePin(D7_GPIO_Port, D7_Pin, 0);
 		if (isButtonPressed(3) == 1){
 			status_pedes = PEDES_ON;
 			setTimer(4, (RED + YELLOW + GREEN) * 2000);

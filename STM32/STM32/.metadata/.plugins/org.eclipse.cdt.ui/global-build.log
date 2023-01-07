@@ -91,3 +91,111 @@ arm-none-eabi-size   MCU-Assignment.elf
   21760	    216	   2000	  23976	   5da8	MCU-Assignment.elf
 Finished building: default.size.stdout
  
+20:50:09 **** Build of configuration Debug for project MCU-Assignment ****
+make -j4 all 
+arm-none-eabi-gcc -o "MCU-Assignment.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Workspace\Lab MCU\Test Assignment_RB\STM32\STM32\MCU-Assignment\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCU-Assignment.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCU-Assignment.elf
+ 
+arm-none-eabi-size   MCU-Assignment.elf 
+arm-none-eabi-objdump -h -S  MCU-Assignment.elf  > "MCU-Assignment.list"
+arm-none-eabi-objcopy  -O ihex  MCU-Assignment.elf  "MCU-Assignment.hex"
+   text	   data	    bss	    dec	    hex	filename
+  22144	    212	   2020	  24376	   5f38	MCU-Assignment.elf
+arm-none-eabi-objcopy  -O binary  MCU-Assignment.elf  "MCU-Assignment.bin"
+Finished building: default.size.stdout
+ 
+Finished building: MCU-Assignment.hex
+Finished building: MCU-Assignment.bin
+ 
+ 
+Finished building: MCU-Assignment.list
+ 
+14:36:48 **** Build of configuration Debug for project MCU-Assignment ****
+make -j4 all 
+arm-none-eabi-size   MCU-Assignment.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22144	    212	   2020	  24376	   5f38	MCU-Assignment.elf
+Finished building: default.size.stdout
+ 
+14:41:14 **** Incremental Build of configuration Debug for project MCU-Assignment ****
+make -j4 all 
+arm-none-eabi-size   MCU-Assignment.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22144	    212	   2020	  24376	   5f38	MCU-Assignment.elf
+Finished building: default.size.stdout
+ 
+14:42:47 **** Incremental Build of configuration Debug for project MCU-Assignment ****
+make -j4 all 
+arm-none-eabi-size   MCU-Assignment.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22144	    212	   2020	  24376	   5f38	MCU-Assignment.elf
+Finished building: default.size.stdout
+ 
+14:55:53 **** Incremental Build of configuration Debug for project MCU-Assignment ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc -o "MCU-Assignment.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Workspace\Lab MCU\Test Assignment_RB\STM32\STM32\MCU-Assignment\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCU-Assignment.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCU-Assignment.elf
+ 
+arm-none-eabi-size   MCU-Assignment.elf 
+arm-none-eabi-objdump -h -S  MCU-Assignment.elf  > "MCU-Assignment.list"
+arm-none-eabi-objcopy  -O ihex  MCU-Assignment.elf  "MCU-Assignment.hex"
+arm-none-eabi-objcopy  -O binary  MCU-Assignment.elf  "MCU-Assignment.bin"
+   text	   data	    bss	    dec	    hex	filename
+  22144	    212	   2020	  24376	   5f38	MCU-Assignment.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCU-Assignment.hex
+Finished building: MCU-Assignment.bin
+ 
+ 
+Finished building: MCU-Assignment.list
+ 
+14:56:00 **** Incremental Build of configuration Debug for project MCU-Assignment ****
+make -j4 all 
+arm-none-eabi-size   MCU-Assignment.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22144	    212	   2020	  24376	   5f38	MCU-Assignment.elf
+Finished building: default.size.stdout
+ 
+20:18:53 **** Incremental Build of configuration Debug for project MCU-Assignment ****
+make -j4 all 
+arm-none-eabi-size   MCU-Assignment.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22144	    212	   2020	  24376	   5f38	MCU-Assignment.elf
+Finished building: default.size.stdout
+ 
+20:19:11 **** Incremental Build of configuration Debug for project MCU-Assignment ****
+make -j4 all 
+arm-none-eabi-size   MCU-Assignment.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22144	    212	   2020	  24376	   5f38	MCU-Assignment.elf
+Finished building: default.size.stdout
+ 
+20:27:59 **** Incremental Build of configuration Debug for project MCU-Assignment ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/fsm_pedestrian_light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_pedestrian_light.d" -MT"Core/Src/fsm_pedestrian_light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_pedestrian_light.o"
+arm-none-eabi-gcc -o "MCU-Assignment.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Workspace\Lab MCU\Test Assignment_RB\STM32\STM32\MCU-Assignment\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCU-Assignment.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCU-Assignment.elf
+ 
+arm-none-eabi-size   MCU-Assignment.elf 
+arm-none-eabi-objdump -h -S  MCU-Assignment.elf  > "MCU-Assignment.list"
+arm-none-eabi-objcopy  -O ihex  MCU-Assignment.elf  "MCU-Assignment.hex"
+arm-none-eabi-objcopy  -O binary  MCU-Assignment.elf  "MCU-Assignment.bin"
+   text	   data	    bss	    dec	    hex	filename
+  22168	    212	   2020	  24400	   5f50	MCU-Assignment.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCU-Assignment.hex
+Finished building: MCU-Assignment.bin
+ 
+ 
+Finished building: MCU-Assignment.list
+ 
+20:28:13 **** Incremental Build of configuration Debug for project MCU-Assignment ****
+make -j4 all 
+arm-none-eabi-size   MCU-Assignment.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22168	    212	   2020	  24400	   5f50	MCU-Assignment.elf
+Finished building: default.size.stdout
+ 

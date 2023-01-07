@@ -11,9 +11,9 @@
 int status = INIT;
 int status_pedes = MODEPEDES;
 
-int RED = 11;
-int YELLOW = 3;
-int GREEN = 8;
+int RED = 5;
+int YELLOW = 2;
+int GREEN = 3;
 
 int sec_RED = 0;
 
